@@ -81,6 +81,7 @@ define("ivy-codemirror/component",
         this._bindCodeMirrorOption('undoDepth');
 
         this._bindCodeMirrorProperty('value', this, '_valueDidChange');
+        this._valueDidChange();
 
         // Force a refresh on `becameVisible`, since CodeMirror won't render itself
         // onto a hidden element.
@@ -109,6 +110,9 @@ define("ivy-codemirror/component",
        */
       _bindCodeMirrorOption: function(key) {
         this._bindCodeMirrorProperty(key, this, '_optionDidChange');
+
+        // Set the initial option synchronously.
+        this._optionDidChange(this, key);
       },
 
       /**
@@ -119,9 +123,6 @@ define("ivy-codemirror/component",
        */
       _bindCodeMirrorProperty: function(key, target, method) {
         this.addObserver(key, target, method);
-
-        // Set the initial option synchronously.
-        this.notifyPropertyChange(key);
 
         this.on('willDestroyElement', this, function() {
           this.removeObserver(key, target, method);
