@@ -110,7 +110,7 @@ var define, requireModule, require, requirejs;
   };
 })();
 
-;define("ivy-codemirror/components/ivy-codemirror",
+;define("ivy-codemirror/components/ivy-codemirror", 
   ["codemirror","ember","exports"],
   function(__dependency1__, __dependency2__, __exports__) {
     "use strict";
@@ -271,7 +271,7 @@ var define, requireModule, require, requirejs;
       }
     });
   });
-;define("ivy-codemirror/index",
+;define("ivy-codemirror/index", 
   ["ivy-codemirror/components/ivy-codemirror","exports"],
   function(__dependency1__, __exports__) {
     "use strict";
