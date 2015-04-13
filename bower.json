@@ -1,11 +1,11 @@
 {
   "name": "ivy-codemirror",
-  "version": "1.0.0-beta.1+canary",
+  "version": "1.0.0",
   "authors": [
     "Dray Lacy"
   ],
   "description": "Ember component for CodeMirror.",
-  "main": "./ivy-codemirror-1.0.0-beta.1+canary.js",
+  "main": "./ivy-codemirror.js",
   "keywords": [
     "codemirror",
     "ember"
